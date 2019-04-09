@@ -35,15 +35,15 @@ app.post('/send', (req, res) => {
     <p>${req.body.message}</p>
   `;
 
-  main();
-/*
+//  main();    //new change
+
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
   //  host: 'mail.YOURDOMAIN.com',
   //host: 'smtp.gmail.com',
   //service: 'gmail',
     host: 'mail.google.com',
-    port: 2525,
+    port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
         user: 'swarajsinha150889@gmail.com', // generated ethereal user
@@ -74,10 +74,10 @@ app.post('/send', (req, res) => {
 
       res.render('contact', {msg:'Email has been sent'});
   });
-  */
+  
   });
 
-
+/*
 //new changes starts
 async function main(){
 console.log('in main method !!!');
@@ -115,5 +115,6 @@ console.log('in main method !!!');
 
 main().catch(console.error);
 //new changes ends
+*/
 
 app.listen(3000, () => console.log('Server started...'));
